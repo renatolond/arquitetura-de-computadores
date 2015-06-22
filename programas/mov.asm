@@ -1,0 +1,10 @@
+;MOV <0, R0>
+MOV <1, R1>
+MOV <2, R2>
+MOV <3, R3>
+MOV <4, R4>
+MOV <(R4), (R0)>
+MOV <(R4), (R1)>
+MOV <(R4), (R2)>
+MOV <(R4), (R3)>
+MOV <(R4), (R4)>

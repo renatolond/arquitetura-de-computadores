@@ -1,0 +1,1 @@
+g++.exe "arquitetura.cpp" -o "arquitetura.exe" -I"I:\boost__" -L"I:\boost__\bin.v2\libs\regex\build\gcc-mingw-3.2.3\release\link-static" -lboost_regex-mgw32-1_34 -g

@@ -1,0 +1,24 @@
+S = 0
+S = A
+S = ~A
+S = -A
+S = B
+S = ~B
+S = -B
+S = A + B
+S = A - B
+S = B - A
+S = A + 1
+S = A - 1
+S = B + 1
+S = B - 1
+S = A and B
+S = A nand B
+S = A or B
+S = A nor B
+S = A xor B
+S = A <<
+S = >> A
+S = B <<
+S = >> B
+

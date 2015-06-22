@@ -1,0 +1,45 @@
+# Project: arquitetura
+# Compiler: Default GCC compiler
+# Compiler Type: MingW 3
+# Makefile created by wxDev-C++ 6.10.2 on 15/07/07 20:41
+
+CPP       = g++.exe
+CC        = gcc.exe
+WINDRES   = windres.exe
+OBJ       = Objects/MingW/arquiteturaApp.o Objects/MingW/arquiteturaDlg.o Objects/MingW/londGrid.o Objects/MingW/arquitetura.o Objects/MingW/arquitetura_private.res
+LINKOBJ   = Objects/MingW/arquiteturaApp.o Objects/MingW/arquiteturaDlg.o Objects/MingW/londGrid.o Objects/MingW/arquitetura.o Objects/MingW/arquitetura_private.res
+LIBS      = -L"C:/Arquivos de programas/Dev-Cpp/Lib" -L"../boost_1_34_0/bin.v2/libs/regex/build/gcc-mingw-3.4.2/release/link-static" -mwindows -lwxmsw28 -lwxmsw28_gl -lwxtiff -lwxjpeg -lwxpng -lwxzlib -lkernel32 -luser32 -lgdi32 -lwinspool -lwinmm -lshell32 -lcomctl32 -lole32 -loleaut32 -luuid -lrpcrt4 -ladvapi32 -lwsock32 -lodbc32 -lboost_regex-mgw34-1_34  
+INCS      = -I"include" -I"../boost_1_34_0"
+CXXINCS   = -I"C:/Arquivos de programas/Dev-Cpp/lib/gcc/mingw32/3.4.2/include" -I"C:/Arquivos de programas/Dev-Cpp/include/c++/3.4.2/backward" -I"C:/Arquivos de programas/Dev-Cpp/include/c++/3.4.2/mingw32" -I"C:/Arquivos de programas/Dev-Cpp/include/c++/3.4.2" -I"C:/Arquivos de programas/Dev-Cpp/include" -I"C:/Arquivos de programas/Dev-Cpp/" -I"C:/Arquivos de programas/Dev-Cpp/include/common/wx/msw" -I"C:/Arquivos de programas/Dev-Cpp/include/common/wx/generic" -I"C:/Arquivos de programas/Dev-Cpp/include/common/wx/fl" -I"C:/Arquivos de programas/Dev-Cpp/include/common/wx/gizmos" -I"C:/Arquivos de programas/Dev-Cpp/include/common/wx/html" -I"C:/Arquivos de programas/Dev-Cpp/include/common/wx/mmedia" -I"C:/Arquivos de programas/Dev-Cpp/include/common/wx/net" -I"C:/Arquivos de programas/Dev-Cpp/include/common/wx/ogl" -I"C:/Arquivos de programas/Dev-Cpp/include/common/wx/plot" -I"C:/Arquivos de programas/Dev-Cpp/include/common/wx/protocol" -I"C:/Arquivos de programas/Dev-Cpp/include/common/wx/stc" -I"C:/Arquivos de programas/Dev-Cpp/include/common/wx/svg" -I"C:/Arquivos de programas/Dev-Cpp/include/common/wx/xml" -I"C:/Arquivos de programas/Dev-Cpp/include/common/wx/xrc" -I"C:/Arquivos de programas/Dev-Cpp/include/common/wx" -I"C:/Arquivos de programas/Dev-Cpp/include/common" -I"../boost_1_34_0"
+RCINCS    = --include-dir "C:/ARQUIV~1/Dev-Cpp/include/common"
+BIN       = Output/MingW/arquitetura.exe
+DEFINES   =  -D__WXMSW__ -D__GNUWIN32__ -D__WIN95__
+CXXFLAGS  = $(CXXINCS) $(DEFINES) -fno-exceptions -fno-pcc-struct-return -fstrict-aliasing -Wall -D__WXMSW__ -D__GNUWIN32__ -D__WIN95__   -fexpensive-optimizations
+CFLAGS    = $(INCS) $(DEFINES) -fno-exceptions -fno-pcc-struct-return -fstrict-aliasing -Wall -D__WXMSW__ -D__GNUWIN32__ -D__WIN95__   -fexpensive-optimizations
+GPROF     = gprof.exe
+RM        = rm -f
+LINK      = g++.exe
+
+.PHONY: all all-before all-after clean clean-custom
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	$(RM) $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(LINK) $(LINKOBJ) -o "Output\MingW\arquitetura.exe" $(LIBS)
+
+Objects/MingW/arquiteturaApp.o: $(GLOBALDEPS) arquiteturaApp.cpp
+	$(CPP) -c arquiteturaApp.cpp -o Objects/MingW/arquiteturaApp.o $(CXXFLAGS)
+
+Objects/MingW/arquiteturaDlg.o: $(GLOBALDEPS) arquiteturaDlg.cpp
+	$(CPP) -c arquiteturaDlg.cpp -o Objects/MingW/arquiteturaDlg.o $(CXXFLAGS)
+
+Objects/MingW/londGrid.o: $(GLOBALDEPS) londGrid.cpp
+	$(CPP) -c londGrid.cpp -o Objects/MingW/londGrid.o $(CXXFLAGS)
+
+Objects/MingW/arquitetura.o: $(GLOBALDEPS) arquitetura.cpp
+	$(CPP) -c arquitetura.cpp -o Objects/MingW/arquitetura.o $(CXXFLAGS)
+
+Objects/MingW/arquitetura_private.res: Objects/MingW/arquitetura_private.rc arquiteturaApp.rc 
+	$(WINDRES) --input-format=rc -o Objects/MingW/arquitetura_private.res $(RCINCS) Objects/MingW/ARQUIT~1.RC -O coff

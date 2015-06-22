@@ -1,0 +1,10 @@
+;ADD <0, R0>
+ADD <1, R1>
+ADD <2, R2>
+ADD <3, R3>
+ADD <4, R4>
+ADD <(R4), (R0)>
+ADD <(R4), (R1)>
+ADD <(R4), (R2)>
+ADD <(R4), (R3)>
+ADD <(R4), (R4)>
